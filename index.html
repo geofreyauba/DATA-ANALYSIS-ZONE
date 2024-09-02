@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Creations Ware - Home</title>
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(to right, #f0f8ff, #e6e6fa);
+            }
+
+            .container {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            header {
+                background: #333;
+                color: #fff;
+                padding: 15px 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            header h1 {
+                margin: 0;
+                font-size: 3em;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+            }
+
+            nav ul li {
+                display: inline;
+            }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.2em;
+            }
+
+            nav ul li a:hover {
+                text-decoration: underline;
+            }
+
+            .shop-now {
+                display: inline-block;
+                padding: 10px 20px;
+                background: transparent;
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.2em; /* Increased font size for the shop now button */
+                border-radius: 5px;
+                transition: all 0.3s;
+            }
+
+            main {
+                padding: 20px 0;
+            }
+
+            section {
+                margin-bottom: 20px;
+            }
+
+            .gallery-item {
+                border: 1px solid #ddd;
+                padding: 10px;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+
+            .gallery-item img {
+                width: 150px;
+                height: auto;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .hero {
+                text-align: center;
+                padding: 20px;
+                background: #f4f4f4;
+            }
+
+            .hero img {
+                max-width: 80%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                margin-bottom: 20px;
+            }
+
+            .content div {
+                flex: 1;
+                min-width: 250px;
+            }
+
+            .content img {
+                width: 80%;
+                height: auto;
+                border-radius: 8px;
+            }
+
+            .footer {
+                background: #333;
+                color: #fff;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                background: transparent;
+                border: 2px solid #333;
+                color: #333;
+                text-decoration: none;
+                font-size: 1em;
+                border-radius: 5px;
+                transition: all 0.3s;
+            }
+
+            .button:hover {
+                background: #333;
+                color: #fff;
+            }
+
+            .shop-item {
+                border: 1px solid #ddd;
+                padding: 10px;
+                margin-bottom: 20px;
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            .shop-item img {
+                width: 20%;
+                height: auto;
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+
+            .shop-item h3 {
+                margin: 10px 0;
+            }
+
+            .shop-item p {
+                margin: 5px 0;
+            }
+
+            .buy-now {
+                display: inline-block;
+                padding: 10px 20px;
+                background: transparent;
+                border: 2px solid #333;
+                color: #333;
+                text-decoration: none;
+                font-size: 1em;
+                border-radius: 5px;
+                transition: all 0.3s;
+            }
+
+            .buy-now:hover {
+                background: #333;
+                color: #fff;
+            }
+
+            .special-offer-content {
+                text-align: center;
+            }
+
+            .special-offer-image {
+                max-width: 50%;
+                height: auto;
+                border-radius: 8px;
+                margin-bottom: 20px;
+            }
+
+            @media (max-width: 768px) {
+                header h1 {
+                    font-size: 2em;
+                }
+
+                nav ul {
+                    flex-direction: column;
+                }
+
+                nav ul li {
+                    margin: 10px 0;
+                }
+
+                .container {
+                    width: 90%;
+                }
+
+                .content {
+                    flex-direction: column;
+                }
+
+                .hero img,
+                .content img,
+                .shop-item img,
+                .special-offer-image {
+                    width: 100%;
+                }
+
+                .gallery-item img {
+                    width: 100px;
+                }
+            }
+
+            .social-media {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 10px;
+            }
+
+            .social-media a {
+                text-decoration: none;
+                color: #333;
+            }
+
+            .social-media a:hover {
+                color: #007bff;
+            }
+
+            .social-media img {
+                width: 30px;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>Creations Ware</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#special-offer">Shop Now</a></li>
+                        <li></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="home">
+                <div class="container hero">
+                    <h2>Discover Your Perfect Style at Creations Ware!</h2>
+                    <img src="1.jpeg" />
+                </div>
+                <div class="container content">
+                    <div>
+                        <h3>Trendy Clothing</h3>
+                        <p>
+                            Whether you need chic outfits for a special event,
+                            comfy casual wear for everyday, or the latest
+                            fashion pieces to update your look, we have it all.
+                            Our collections are designed to keep you on-trend
+                            and feeling fabulous.
+                        </p>
+                        <img src="2.jpg" />
+                    </div>
+                    <div>
+                        <h3>Stylish Footwear</h3>
+                        <p>
+                            From sleek sneakers to elegant heels and everything
+                            in between, our footwear selection ensures you step
+                            out in style and comfort. Find the perfect pair to
+                            complement your outfits and support your lifestyle.
+                        </p>
+                        <img src="3.jpg" />
+                    </div>
+                </div>
+                <section id="special-offer" class="container">
+                    <h2>Special Offer</h2>
+                    <div class="special-offer-content">
+                        <img src="15.jpeg" class="special-offer-image" />
+                        <p>
+                            Use the code <strong>STYLE15</strong> at checkout to
+                            receive 15% off your first purchase. Plus, sign up
+                            for our newsletter to get exclusive discounts and
+                            updates on new arrivals!
+                        </p>
+                        <a href="#shop-now" class="button">Shop Now</a>
+                    </div>
+                </section>
+            </section>
+
+            <section id="about">
+                <div class="container">
+                    <h2>About Us</h2>
+                    <p>
+                        At Creations Ware, we offer the best fashion at
+                        affordable prices. Our collection includes the latest
+                        trends in clothing and footwear. Our mission is to
+                        provide stylish and high-quality products to our
+                        customers, ensuring they look and feel their best.
+                    </p>
+                    <p>
+                        Follow us on social media to stay updated with the
+                        latest trends, promotions, and more:
+                    </p>
+                </div>
+            </section>
+
+            <section id="contact">
+                <div class="container">
+                    <h2>Contact Us</h2>
+                    <p>
+                        For inquiries, please email us at
+                        <a href="mailto:creationsware@gmail.com"
+                            >creationsware@gmail.com</a
+                        >
+                    </p>
+                    <p>tel +25506654534, +2554567893</p>
+                    <p>You can also reach us via our social media channels:</p>
+                    <div class="social-media"></div>
+                </div>
+            </section>
+
+            <section id="gallery">
+                <div class="container">
+                    <h2>Gallery</h2>
+                    <div class="gallery-item">
+                        <h3>Men's Clothing</h3>
+                        <img src="21.webp" alt="Men's Clothing 1" />
+                        <img src="22.jpg" alt="Men's Clothing 2" />
+                        <img src="23.jpeg" alt="Men's Clothing 3" />
+                        <img src="24.jpeg" alt="Men's Clothing 4" />
+                    </div>
+                    <div class="gallery-item">
+                        <h3>Women's Clothing</h3>
+                        <img src="16.jpg" alt="Women's Clothing 1" />
+                        <img src="17.webp" alt="Women's Clothing 2" />
+                        <img src="18.jpeg" alt="Women's Clothing 3" />
+                        <img src="19.webp" alt="Women's Clothing 4" />
+                    </div>
+                    <div class="gallery-item">
+                        <h3>Shoes</h3>
+                        <img src="26.jpeg" alt="Shoes 1" />
+                        <img src="27.jpg" alt="Shoes 2" />
+                        <img src="29.jpg" alt="Shoes 3" />
+                        <img src="30.jpeg" alt="Shoes 4" />
+                    </div>
+                </div>
+            </section>
+
+            <section id="shop-now">
+                <div class="container">
+                    <h2>Shop Now</h2>
+                    <div class="shop-item">
+                        <img src="4.webp" alt="Item 1" />
+                        <h3>A-Line Dress</h3>
+                        <p>Price: 10050 Tsh</p>
+                        <a class="buy-now">Buy Now</a>
+                    </div>
+                    <div class="shop-item">
+                        <img src="5.jpeg" alt="Item 2" />
+                        <h3>Empire Waist Dress</h3>
+                        <p>Price: 70600 Tsh</p>
+                        <a class="buy-now">Buy Now</a>
+                    </div>
+                    <div class="shop-item">
+                        <img src="6.jpeg" alt="Item 3" />
+                        <h3>Fit-and-Flare Dress</h3>
+                        <p>Price: 30070 Tsh</p>
+                        <a class="buy-now">Buy Now</a>
+                    </div>
+                    <div class="shop-item">
+                        <img src="7.webp" alt="Item 4" />
+                        <h3>Two Bottom Suit</h3>
+                        <p>Price: 98080 Tsh</p>
+                        <a class="buy-now">Buy Now</a>
+                    </div>
+                    <div class="shop-item">
+                        <img src="8.jpeg" alt="Item 5" />
+                        <h3>Long Sleeve Shirt</h3>
+                        <p>Price: 20090 Tsh</p>
+                        <a class="buy-now">Buy Now</a>
+                    </div>
+                    <div class="shop-item">
+                        <img src="9.jpeg" alt="Item 6" />
+                        <h3>Naija Khanzu</h3>
+                        <p>Price: 10100 Tsh</p>
+
+                        <a class="buy-now">Buy Now</a>
+                    </div>
+                    <div class="shop-item">
+                        <img src="10.webp" alt="Item 7" />
+                        <h3>Sports Shoes</h3>
+                        <p>Price: 10110 Tsh</p>
+                        <a class="buy-now">Buy Now</a>
+                    </div>
+                    <div class="shop-item">
+                        <img src="11.jpeg" alt="Item 8" />
+                        <h3>Official Shoe</h3>
+                        <p>Price: 10120 Tsh</p>
+                        <a class="buy-now">Buy Now</a>
+                    </div>
+                    <div class="shop-item">
+                        <img src="12.jpeg" alt="Item 9" />
+                        <h3>Open High Heels</h3>
+                        <p>Price: 10130 Tsh</p>
+                        <a class="buy-now">Buy Now</a>
+                    </div>
+                    <div class="shop-item">
+                        <img src="13.jpeg" alt="Item 10" />
+                        <h3>Close High Heels</h3>
+                        <p>Price: 10400 Tsh</p>
+                        <a class="buy-now">Buy Now</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Creations Ware. All rights reserved.</p>
+                <p>
+                    Follow us on
+                    <a href="#" style="color: #fff">Social Media Handles</a> for
+                    style inspiration, fashion tips, and updates on our newest
+                    arrivals.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
